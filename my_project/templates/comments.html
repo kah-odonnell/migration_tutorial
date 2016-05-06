@@ -1,5 +1,6 @@
 {% for comment in comments %}
 	<div>{{ comment.text }}</div>
+	<div>{{ comment.author }}</div>
 {% endfor %}
 
 <br> 
@@ -9,6 +10,8 @@
 	<div class="form-group">
 		<label for="comment">Comment: </label>
 		<input type="text" id="comment" name="comment">
+		<label for="author">Author: </label>
+		<input type="text" id="author" name="author">
 	</div>
 	<button type="submit">Submit</button>
 </form>
