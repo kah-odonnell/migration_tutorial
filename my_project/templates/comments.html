@@ -1,0 +1,14 @@
+{% for comment in comments %}
+	<div>{{ comment.text }}</div>
+{% endfor %}
+
+<br> 
+
+<form action="/addcomment/" method="post">
+	{% csrf_token %}
+	<div class="form-group">
+		<label for="comment">Comment: </label>
+		<input type="text" id="comment" name="comment">
+	</div>
+	<button type="submit">Submit</button>
+</form>
