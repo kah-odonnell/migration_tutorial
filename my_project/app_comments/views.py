@@ -10,9 +10,11 @@ def index(request):
 
 def addcomment(request):
 	if request.method == 'POST':
-		text = request.POST.get('comment')            
+		text = request.POST.get('comment')  
+		author = request.POST.get('author')            
         comment = Comment(
-            text = text
+            text = text,
+            author = author
         )
         comment.save()
         return HttpResponseRedirect('/')
